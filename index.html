@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Romantic Surprise...</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <!-- Floating Background Particles -->
+  <div class="floating-particle">🌸</div>
+  <div class="floating-particle" style="left: 20%; animation-delay: 2s; font-size: 1rem;">💖</div>
+  <div class="floating-particle" style="left: 70%; animation-delay: 4s;">✨</div>
+  <div class="floating-particle" style="left: 85%; animation-delay: 1s; font-size: 1.2rem;">💕</div>
+
+  <!-- STAGE 1: The Trick Question -->
+  <div id="stage1" class="stage-container">
+    <h1>Who is your daddy?</h1>
+    <div class="button-group">
+      <button onclick="nextStage('stage1', 'stage2')" class="btn">Me</button>
+      <button id="dodgeBtn" class="btn">Someone Else</button>
+    </div>
+  </div>
+
+  <!-- STAGE 2: The Password -->
+  <div id="stage2" class="stage-container" style="display: none;">
+    <h1>Who is my Good Girl?</h1>
+    <input type="text" id="goodGirlAnswer" class="input-box" placeholder="Type your answer...">
+    <p class="hint">Hint: 5 Letters</p>
+    <button onclick="checkAnswer()" class="btn">Submit</button>
+    <p id="errorMessage" style="display: none;">That is not the right answer Bhainss. Try again... 💕</p>
+  </div>
+
+  <!-- STAGE 3: Happy Birthday -->
+  <div id="stage3" class="stage-container" style="display: none;">
+    <h1 class="romantic-title">Happy Birthday Divyu 💖✨</h1>
+    <p id="typewriterText" class="typewriter-text"></p>
+    <button id="stage3Btn" onclick="nextStage('stage3', 'stage4')" class="btn proceed-btn" style="display: none; margin-top: 20px;">Click here to proceed 🌸</button>
+  </div>
+
+  <div id="stage4" class="stage-container" style="display: none;">
+        <div class="cat-banner-container" id="catBanner">
+            <img src="gif1.gif" alt="Cute cat animation" class="cat-img">
+            <div class="banner">HAPPY BIRTHDAY MUMMA</div>
+            <img src="gif2.gif" alt="Playful cat animation" class="cat-img">
+        </div>
+        <button id="stage4Btn" onclick="nextStage('stage4', 'stage5')" class="btn proceed-btn" style="display: none; margin-top: 30px;">Click here to proceed 🌸</button>
+    </div>
+
+  <!-- STAGE 5: The 4 Reasons -->
+  <div id="stage5" class="stage-container" style="display: none;">
+    <h1 class="romantic-title">Reasons Why You're So Special 💖</h1>
+    <div class="reason-card">
+      <p id="reasonText">✨ You’re such a kind and wonderful person, and I feel very lucky to share such a good bond with you my bhains. 💕</p>
+    </div>
+    <button id="reasonBtn" onclick="nextReason()" class="btn reason-btn">Click Here...</button>
+    <p id="reasonCounter" class="counter">Reason 1 of 4</p>
+  </div>
+
+  <!-- STAGE 6: Gallery & Final Message -->
+  <div id="stage6" class="stage-container" style="display: none; padding-top: 50px;">
+    <h1 class="romantic-title gallery-title">Our Beautiful Moments Together</h1>
+    <p class="gallery-subtitle">Every moment spent with you has been magical. Let's cherish these precious memories...</p>
+    
+    <div class="gallery-grid">
+      <div class="photo-card"><img src="d1.jpg" alt="Memory 1"></div>
+      <div class="photo-card"><img src="d2.jpg" alt="Memory 2"></div>
+      <div class="photo-card"><img src="d3.jpg" alt="Memory 3"></div>
+    </div>
+
+    <!-- FINAL MESSAGE WITH CATS -->
+    <div class="final-message-box">
+      <img src="gif1.gif" alt="Cute cat animation" class="final-cat">
+      <div class="final-text">
+        <h2 class="romantic-title" style="font-size: 2.5rem; margin-bottom: 15px;">Thank You for the Memories</h2>
+        <p>Every laugh, every chat, and every moment we’ve shared has been truly special. 💫</p>
+        <p>I’m so grateful for the bond we have, and for the positivity you always bring into my life.</p>
+        <p>On your birthday, I just wish for endless happiness, love, the best health and success to come your way. 🌸</p>
+        <p>You deserve all the joy in the world—keep shining, keep laughing, and keep spreading your beautiful energy. ✨</p>
+        <h3 class="romantic-title" style="font-size: 2.2rem; margin-top: 20px; color: #ff4d6d;">Until We Meet Again 💝</h3>
+      </div>
+      <img src="gif2.gif" alt="Playful cat animation" class="final-cat">
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
